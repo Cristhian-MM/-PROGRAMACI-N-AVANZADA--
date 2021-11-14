@@ -55,3 +55,34 @@ class Persona:
             print(self.__nombre, 'esta jugando videojuegos.')
         elif AA == 3:
             print(self.__nombre, 'esta leyendo un libro.')
+
+class Empleado(Persona):
+    def __init__(self, nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico, empresa, puesto, sueldo):
+        super().__init__(nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico)
+        self.__empresa = empresa
+        self.__puesto = puesto
+        self.__sueldo = sueldo
+
+    def getEmpresa(self):
+        return self.__empresa
+    def getPuesto(self):
+        return self.__puesto
+    def getSueldo(self):
+        return self.__sueldo
+
+    def Curriculum(self):
+        print(' ')
+        print('|--------------------------------|')
+        print('      ',Persona.getNombre(self),Persona.getApellido(self))
+        print('|--------------------------------|')
+        print('          --Contacto--')
+        print(' Telefono: ',Persona.getNumeroTelefonico(self))
+        print('     --Informacion personal--')
+        print(' Edad: ',Persona.getEdad(self))
+        print(' Estatura: ',Persona.getEstatura(self))
+        print('    --Informacion Educativa--')
+        print(' Nivel academico: ',Persona.getNivelAcademico(self))
+        print('      --Historial Laboral--')
+        print(' Empresa: ',Empleado.getEmpresa(self))
+        print(' Puesto: ',Empleado.getPuesto(self))
+        print('|--------------------------------|')
