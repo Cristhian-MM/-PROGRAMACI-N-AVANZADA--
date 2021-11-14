@@ -169,3 +169,18 @@ class JefeDeMarketing(Empleado):
             print('El Jefe de Marketing',Persona.getNombre(self), 'esta gestionando la imagen de la empresa.')
         elif TA == 3:
             print('El Jefe de Marketing',Persona.getNombre(self), 'esta supervisando la pagina web.')
+
+class Administrador(Empleado):
+    _puesto = 'Administrador'
+    def __init__(self, nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico, empresa, sueldo):
+        super().__init__(nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico, empresa, self._puesto, sueldo)
+
+    def TrabajoAleatorio(self):
+        print(' ')
+        TA = random.randint(1, 3)
+        if TA == 1:
+            print('El Administrador',Persona.getNombre(self), 'esta redactando un oficio.')
+        elif TA == 2:
+            print('El Administrador',Persona.getNombre(self), 'esta realizando papeleo.')
+        elif TA == 3:
+            print('El Administrador',Persona.getNombre(self), 'esta redactando un correo electronico.')
