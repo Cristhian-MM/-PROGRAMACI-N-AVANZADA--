@@ -139,3 +139,18 @@ class Gerente(Empleado):
             print('El Gerente',Persona.getNombre(self), 'esta organizando los recursos de la empresa.')
         elif TA == 3:
             print('El Gerente',Persona.getNombre(self), 'esta planificando los objetivos de la empresa.')
+
+class Contador(Empleado):
+    _puesto = 'Contador'
+    def __init__(self, nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico, empresa, sueldo):
+        super().__init__(nombre, apellido, edad, estatura, nivelAcademico, numeroTelefonico, empresa, self._puesto, sueldo)
+
+    def TrabajoAleatorio(self):
+        print(' ')
+        TA = random.randint(1, 3)
+        if TA == 1:
+            print('El contador',Persona.getNombre(self), 'esta realizando un balance.')
+        elif TA == 2:
+            print('El contador',Persona.getNombre(self), 'esta organizando la nómina de los empleados.')
+        elif TA == 3:
+            print('El contador',Persona.getNombre(self), 'esta analisando los gastos y ganancias de la empresa.')
