@@ -184,3 +184,4 @@ class Administrador(Empleado):
             print('El Administrador',Persona.getNombre(self), 'esta realizando papeleo.')
         elif TA == 3:
             print('El Administrador',Persona.getNombre(self), 'esta redactando un correo electronico.')
+
